@@ -1,0 +1,12 @@
+{
+  "postdocTitle": "Postdoctoral researchers",
+  "postdocText": "If you have an idea for a postdoc project on predation resistance, microbial evolution, or host-microbe interactions, get in touch — I'm happy to collaboratively develop a proposal for postdoc funding.",
+  "gradTitle": "Graduate students (M.S. and Ph.D.)",
+  "gradText": "If you're interested in joining the lab, reach out with your research interests, experience, and a CV. All prospective graduate students should plan on applying for graduate fellowships — they help fund your tuition and stipend, strengthen your CV, and give you more time for research. Consider:",
+  "gradFellowships": [
+    { "label": "NSF Graduate Research Fellowship Program", "url": "https://www.nsfgrfp.org/" },
+    { "label": "Ford Foundation Fellowships", "url": "https://sites.nationalacademies.org/pga/fordfellowships/" }
+  ],
+  "undergradTitle": "Undergraduate students",
+  "undergradText": "Texas Tech undergraduates interested in joining the lab should email me directly. Please be ready to send a CV and a short description of your research interests."
+}

@@ -1,0 +1,21 @@
+{
+  "heroKicker": "Steele Lab — Texas Tech University",
+  "heroHeadline": "Predators shape microbes.",
+  "heroText": "We study bacteria that live alongside the soil amoeba Dictyostelium discoideum — a predator that eats bacteria for a living — to understand why some microbes evolve into symbionts while others become pathogens.",
+  "highlights": [
+    {
+      "title": "Predation resistance",
+      "text": "How free-living Pseudomonas survive being eaten, and what that costs them."
+    },
+    {
+      "title": "Symbiosis & virulence",
+      "text": "How Paraburkholderia moved from surviving digestion to living inside its host."
+    },
+    {
+      "title": "Molecular mechanisms",
+      "text": "Comparative genomics, transcriptomics, and transposon mutagenesis to find the genes that matter."
+    }
+  ],
+  "joinHeadline": "Join the lab",
+  "joinText": "We're looking for graduate students, postdocs, and undergraduates curious about the line between predator, prey, pathogen, and partner."
+}
