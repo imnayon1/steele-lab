@@ -55,8 +55,11 @@ async function renderHome() {
     );
   });
 
-  document.getElementById("join-headline").textContent = d.joinHeadline;
-  document.getElementById("join-text").textContent = d.joinText;
+      document.getElementById("join-headline").textContent = d.joinHeadline;
+      document.getElementById("join-text").textContent = d.joinText;
+      const btn = document.getElementById("join-btn");
+      btn.textContent = d.joinButtonText || "See how to join";
+      btn.href = d.joinButtonLink || "/join.html";
 }
 
 // ---------- research ----------
