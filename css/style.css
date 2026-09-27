@@ -259,7 +259,7 @@ section.tight { padding: 24px 0; }
   margin-top: 32px;
 }
 
-.callout h2 { color: var(--moss); }
+.callout h2 { color: var(--moss); } .callout p { max-width: 78ch; }
 
 .btn {
   display: inline-block;
