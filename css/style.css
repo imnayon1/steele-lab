@@ -1,0 +1,257 @@
+/* ============================================================
+   Steele Lab — design tokens
+   ============================================================ */
+
+:root {
+  --paper: #fffcf7;
+  --paper-dim: #f7f2e9;
+  --ink: #1c1b1a;
+  --muted: #6b675e;
+  --line: #e6e1d6;
+
+  --orange: #ef6d13;
+  --orange-deep: #c6540a;
+  --orange-tint: #fde9d7;
+
+  --moss: #33604a;
+  --moss-tint: #e4ede7;
+
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --measure: 62ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+::selection { background: var(--orange-tint); color: var(--orange-deep); }
+
+:focus-visible {
+  outline: 2px solid var(--orange-deep);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.3rem, 4.5vw, 3.6rem); font-weight: 460; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); }
+h3 { font-size: 1.25rem; font-style: italic; font-weight: 500; }
+
+p { margin: 0 0 1.1em; max-width: var(--measure); color: var(--ink); }
+p.lede { font-size: 1.2rem; color: var(--muted); max-width: 58ch; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- header ---------- */
+
+.site-header { border-bottom: 1px solid var(--line); }
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.wordmark em { color: var(--orange-deep); font-style: normal; }
+
+nav.primary { display: flex; gap: 28px; flex-wrap: wrap; }
+
+nav.primary a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.97rem;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+nav.primary a:hover { color: var(--ink); }
+
+nav.primary a.is-active {
+  color: var(--ink);
+  border-bottom-color: var(--orange);
+}
+
+/* ---------- hero ---------- */
+
+.hero { padding: 64px 0 40px; }
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-kicker { font-size: 0.95rem; color: var(--orange-deep); margin-bottom: 14px; }
+
+.hero-art { max-width: 340px; justify-self: end; }
+
+@media (max-width: 800px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-art { justify-self: start; max-width: 240px; }
+}
+
+/* ---------- sections ---------- */
+
+section { padding: 40px 0; }
+section.tight { padding: 24px 0; }
+
+.rule { border: none; border-top: 1px solid var(--line); margin: 0; }
+
+.eyebrow {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* ---------- highlight / project rows ---------- */
+
+.rows { margin-top: 8px; }
+
+.row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 28px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+
+.row h3 { margin-bottom: 6px; }
+.row p { margin: 0; }
+
+@media (max-width: 700px) {
+  .row { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* ---------- people ---------- */
+
+.person {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 26px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.person img.photo {
+  width: 132px; height: 132px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--paper-dim);
+}
+
+.person .role { color: var(--orange-deep); font-size: 0.92rem; margin-bottom: 6px; }
+.person .meta { font-size: 0.92rem; color: var(--muted); margin-bottom: 4px; }
+
+@media (max-width: 620px) {
+  .person { grid-template-columns: 84px 1fr; }
+  .person img.photo { width: 84px; height: 84px; }
+}
+
+.empty-note { color: var(--muted); font-style: italic; padding: 18px 0; }
+
+/* ---------- publications ---------- */
+
+.pub-list { margin-top: 8px; }
+
+.pub { padding: 20px 0; border-top: 1px solid var(--line); }
+
+.pub .year {
+  display: inline-block;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--orange-deep);
+  margin-right: 10px;
+}
+
+.pub .authors { color: var(--ink); }
+.pub .title { display: block; margin: 4px 0 2px; font-weight: 500; }
+.pub .cite { color: var(--muted); font-size: 0.95rem; }
+.pub .note { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+.pub a.doi { color: var(--orange-deep); text-decoration: none; border-bottom: 1px solid var(--orange-tint); }
+.pub a.doi:hover { border-bottom-color: var(--orange-deep); }
+
+/* ---------- callout box (used on Home and Join pages) ---------- */
+/* Everything inside .callout gets a wider text measure than the site
+   default, so long paragraphs fill the box instead of leaving a gap
+   on the right. If you ever want it even wider or narrower, this is
+   the one number to change: */
+
+.callout { background: var(--moss-tint); border-radius: 6px; padding: 36px; margin-top: 32px; }
+.callout h2 { color: var(--moss); }
+.callout p { max-width: 80ch; }
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 11px 22px;
+  background: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.98rem;
+}
+
+.btn:hover { background: var(--orange-deep); }
+
+/* ---------- contact block ---------- */
+
+.contact dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+.contact dt { color: var(--muted); }
+.contact dd { margin: 0; }
+
+/* ---------- footer ---------- */
+
+footer.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 26px 0 40px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer.site-footer a { color: var(--muted); }

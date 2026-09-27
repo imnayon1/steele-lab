@@ -1,0 +1,138 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "content/settings.json"
+        label: "Site Settings (used in the footer and contact info everywhere)"
+        name: "settings"
+        fields:
+          - { label: "Lab name", name: "labName", widget: "string" }
+          - { label: "PI name", name: "piName", widget: "string" }
+          - { label: "PI title", name: "piTitle", widget: "string" }
+          - { label: "Department", name: "department", widget: "string" }
+          - { label: "University", name: "university", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Office", name: "office", widget: "string" }
+
+  - name: "home"
+    label: "Home Page"
+    files:
+      - file: "content/home.json"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Small line above the headline", name: "heroKicker", widget: "string" }
+          - { label: "Big headline", name: "heroHeadline", widget: "string" }
+          - { label: "Intro paragraph (under the headline)", name: "heroText", widget: "text" }
+          - { label: "Label above the 3 short highlights (e.g. \"What we study\")", name: "highlightsEyebrow", widget: "string" }
+          - label: "The 3 short highlights"
+            name: "highlights"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - { label: "Green box — heading", name: "calloutHeadline", widget: "string" }
+          - { label: "Green box — paragraph", name: "calloutText", widget: "text" }
+          - { label: "Green box — button text (e.g. \"Read more about our research\")", name: "calloutButtonText", widget: "string" }
+          - { label: "Green box — button link (e.g. /research.html or /join.html)", name: "calloutButtonLink", widget: "string" }
+
+  - name: "research"
+    label: "Research Page"
+    files:
+      - file: "content/research.json"
+        label: "Research Page"
+        name: "research"
+        fields:
+          - { label: "Page title (top of page)", name: "pageTitle", widget: "string" }
+          - { label: "Intro paragraph", name: "intro", widget: "text" }
+          - { label: "\"Two strategies\" heading", name: "strategiesTitle", widget: "string" }
+          - { label: "\"Two strategies\" text", name: "strategiesText", widget: "text" }
+          - label: "Current research projects list"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Project title", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+          - { label: "\"Why an amoeba\" heading", name: "modelSystemTitle", widget: "string" }
+          - { label: "\"Why an amoeba\" text", name: "modelSystemText", widget: "text" }
+
+  - name: "people"
+    label: "People Page"
+    files:
+      - file: "content/people.json"
+        label: "People Page"
+        name: "people"
+        fields:
+          - { label: "Page title (top of page)", name: "pageTitle", widget: "string" }
+          - { label: "Label above the PI's info (e.g. \"Principal Investigator\")", name: "piEyebrow", widget: "string" }
+          - { label: "Label above the lab members list (e.g. \"Lab members\")", name: "membersEyebrow", widget: "string" }
+          - { label: "Text shown if no lab members have been added yet", name: "membersEmptyText", widget: "string" }
+          - label: "Principal Investigator"
+            name: "pi"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Education", name: "education", widget: "text" }
+              - { label: "Research interests", name: "interests", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+          - label: "Lab members"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role (e.g. M.Sc. Student, Postdoctoral Researcher)", name: "role", widget: "string" }
+              - { label: "Year (e.g. 2024 - Present)", name: "year", widget: "string", required: false }
+              - { label: "Education", name: "education", widget: "string", required: false }
+              - { label: "Research interests", name: "interests", widget: "text", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+
+  - name: "publications"
+    label: "Publications Page"
+    files:
+      - file: "content/publications.json"
+        label: "Publications Page"
+        name: "publications"
+        fields:
+          - { label: "Page title (top of page)", name: "pageTitle", widget: "string" }
+          - label: "Publication list"
+            name: "publications"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Authors", name: "authors", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Journal", name: "journal", widget: "string" }
+              - { label: "Details (volume:pages)", name: "details", widget: "string", required: false }
+              - { label: "DOI — just the code, e.g. 10.1128/mBio.01630-17 (leave blank if none)", name: "doi", widget: "string", required: false }
+              - { label: "Note (e.g. undergraduate co-author)", name: "note", widget: "string", required: false }
+
+  - name: "join"
+    label: "Join the Lab Page"
+    files:
+      - file: "content/join.json"
+        label: "Join the Lab Page"
+        name: "join"
+        fields:
+          - { label: "Page title (top of page)", name: "pageTitle", widget: "string" }
+          - { label: "Postdoc section — heading", name: "postdocTitle", widget: "string" }
+          - { label: "Postdoc section — text", name: "postdocText", widget: "text" }
+          - { label: "Grad student section — heading", name: "gradTitle", widget: "string" }
+          - { label: "Grad student section — text", name: "gradText", widget: "text" }
+          - label: "Grad student section — fellowship links"
+            name: "gradFellowships"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - { label: "Undergrad section — heading", name: "undergradTitle", widget: "string" }
+          - { label: "Undergrad section — text", name: "undergradText", widget: "text" }
+          - { label: "\"Get in touch\" box heading", name: "contactHeadline", widget: "string" }
