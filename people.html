@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People — Steele Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/"><em>Steele</em> Lab</a>
+    <nav class="primary">
+      <a href="/">Home</a>
+      <a href="/research.html">Research</a>
+      <a href="/people.html" class="is-active">People</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/join.html">Join the lab</a>
+    </nav>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <h1>People</h1>
+    <span class="eyebrow">Principal Investigator</span>
+    <div id="pi-block"></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Lab members</span>
+    <div id="members-list"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap contact">
+    <p><span data-lab-name></span> · <span data-department></span>, <span data-university></span></p>
+    <p><a data-email href="#"></a></p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+  renderSettings();
+  renderPeople();
+</script>
+</body>
+</html>

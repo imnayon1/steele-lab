@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steele Lab — Texas Tech University</title>
+<meta name="description" content="The Steele Lab studies how bacteria evolve under predation pressure from the soil amoeba Dictyostelium discoideum, and what that reveals about symbiosis and virulence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/"><em>Steele</em> Lab</a>
+    <nav class="primary">
+      <a href="/" class="is-active">Home</a>
+      <a href="/research.html">Research</a>
+      <a href="/people.html">People</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/join.html">Join the lab</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-kicker" id="hero-kicker"></span>
+      <h1 id="hero-headline"></h1>
+      <p class="lede" id="hero-text"></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 340 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line illustration of an amoeba engulfing a bacterium">
+      <path d="M60 150c-8-46 26-92 82-98 50-6 96 18 118 58 18 33 14 78-14 108-30 33-82 44-124 28-40-16-56-58-62-96z"
+        stroke="#33604A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M150 120c14-10 34-8 44 4 9 11 8 27-3 38"
+        stroke="#33604A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <rect x="150" y="150" width="66" height="24" rx="12" transform="rotate(-18 150 150)"
+        stroke="#EF6D13" stroke-width="2.5" fill="#FDE9D7"/>
+      <circle cx="118" cy="112" r="3" fill="#33604A"/>
+      <circle cx="210" cy="200" r="3" fill="#33604A"/>
+      <circle cx="90" cy="190" r="2.4" fill="#33604A"/>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">What we study</span>
+    <div id="home-highlights" class="rows"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="callout">
+      <h2 id="join-headline"></h2>
+      <p id="join-text"></p>
+      <a class="btn" href="/join.html">See how to join</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap contact">
+    <p><span data-lab-name></span> · <span data-department></span>, <span data-university></span></p>
+    <p><a data-email href="#"></a></p>
+  </div>
+</footer>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<script src="/js/main.js"></script>
+<script>
+  renderSettings();
+  renderHome();
+</script>
+</body>
+</html>

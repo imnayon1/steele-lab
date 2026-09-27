@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = "echo 'no build needed — static site'"
+
+[[headers]]
+  for = "/content/*.json"
+  [headers.values]
+    Cache-Control = "no-cache"
